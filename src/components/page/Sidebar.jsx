@@ -27,7 +27,7 @@ const Sidebar = () => {
 
 
   return (
-    <div className={`ml-3 h-screen md:overflow-hidden  
+    <div className={`ml-3 ${!activeMenu ? 'min-h-screen' : 'h-screen'} md:overflow-hidden  
       md:hover:overflow-auto pb-10 relative overflow-auto`}>
         {
           activeMenu && 
@@ -69,8 +69,9 @@ const Sidebar = () => {
             ))}
           </div>
 
-          <div className={`absolute flex justify-center ml-5  ${activeMenu && 'mt-[20px] bottom-1'} 
-            items-center left-4 bottom-6 cursor-pointer dark:text-gray-200`}>
+          <div className={` absolute  bottom-6 left-2 flex justify-center ml-5  
+            ${!activeMenu && 'scroll-mt-12 mt-12'} 
+            items-center cursor-pointer dark:text-gray-200`}>
             <AiOutlinePoweroff className='mr-3 dark'/>
             <span className='font-semibold '>Logout</span>
           </div>
