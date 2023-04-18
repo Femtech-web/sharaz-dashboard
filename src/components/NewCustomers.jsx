@@ -14,9 +14,9 @@ const Customers = ({ CustomerImage, CustomerName, Status, StatusBg}) => {
                 </div>
                 <p className='text-left mr-8 text-md dark:text-gray-200'>{CustomerName}</p>
             </div>
-            <div className={`flex hover:opacity-50 justify-center dark:bg-slate-700
-                items-center bg-blue-100 rounded-md p-2`}>
-                <button className={`px-1 text-black dark:text-gray-200`}>{Status}</button>
+            <div className={` hover:opacity-50  dark:bg-slate-700 text-right
+                 bg-blue-100 rounded-md p-2`}>
+                <button className={`px-1 text-black dark:text-gray-200 text-right`}>{Status}</button>
             </div>
         </div>
     )

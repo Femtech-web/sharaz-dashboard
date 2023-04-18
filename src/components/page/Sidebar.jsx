@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { MdOutlineCancel, MdSpaceDashboard } from "react-icons/md";
 import { AiOutlinePoweroff } from 'react-icons/ai';
 import { useStateContext } from '../../contexts/ContextProvider';
+import 'animate.css'
 
 import { links } from "../../data/dummy";
 
@@ -17,17 +18,17 @@ const Sidebar = () => {
     } 
   }
 
-  const activeLink = `flex items-center gap-5 
+  const activeLink = `flex items-center gap-5 animate__animated animate__fadeInUp
   pl-4 pt-3 pb-2.5 rounded-lg text-white m-2 text-md`;
 
-  const normalLink = `flex items-center gap-5 
+  const normalLink = `flex items-center gap-5 animate__animated animate__fadeInUp
   pl-4 pt-3 pb-2.5 rounded-lg hover:bg-gray-200 m-2 
   dark:text-gray-200 text-md text-gray-700 dark:hover:text-black `;
 
 
   return (
-    <div className='ml-3 h-screen overflow-hidden  
-      md:hover:overflow-auto pb-10 relative'>
+    <div className={`ml-3 h-screen md:overflow-hidden  
+      md:hover:overflow-auto pb-10 relative overflow-auto`}>
         {
           activeMenu && 
           (<div className='flex justify-between items-center'>
@@ -68,8 +69,8 @@ const Sidebar = () => {
             ))}
           </div>
 
-          <div className='absolute flex justify-center ml-5 
-            items-center left-4 bottom-6 cursor-pointer dark:text-gray-200'>
+          <div className={`absolute flex justify-center ml-5  ${activeMenu && 'mt-[20px] bottom-1'} 
+            items-center left-4 bottom-6 cursor-pointer dark:text-gray-200`}>
             <AiOutlinePoweroff className='mr-3 dark'/>
             <span className='font-semibold '>Logout</span>
           </div>

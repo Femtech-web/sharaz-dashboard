@@ -28,8 +28,8 @@ const EmployeesPage = () => {
     <div  className='bg-white rounded-xl p-5 dark:bg-second-dark-bg mb-6'>
       <p className='text-slate-600 font-semibold my-4 text-3xl mb-8
        dark:text-gray-200'>Employees Page</p>
-      <div className={`grid ${activeMenu ? 'grid-cols-3 gap-6' : 'grid-cols-2 gap-4'}
-       ${mobile && 'grid-cols-1 gap-6'} `}>
+      <div className={`grid ${mobile ? 'grid-cols-1 gap-6' : activeMenu ? 'grid-cols-3 gap-6' : 'grid-cols-2 gap-4'}
+       ${mobile ? 'grid-cols-1 gap-6' : ''} `}>
         {employeesData.slice(0,9).map((item, index) => (
           <Card key={index} {...item} />
         ))}
