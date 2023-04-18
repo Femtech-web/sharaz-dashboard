@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import { useStateContext } from './contexts/ContextProvider';
 import { SettingsBar, Sidebar, Navbar, ThemeSettings } from './components';
 import { Home, Analytics, Sales, Customers,
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className={ currentMode === "Dark" && 'dark' }>
-      <Router>
+      <Router basename='/'>
         <div className='Relative flex dark:bg-main-dark-bg'>
           <SettingsBar />
         </div>
