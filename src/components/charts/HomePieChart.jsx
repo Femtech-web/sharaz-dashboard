@@ -7,7 +7,7 @@ const HomePieChart = () => {
   const { activeMenu } = useStateContext();
 
   return (
-    <div className={`rounded-xl m-3 bg-white  ${activeMenu ? 'w-[35%] mt-10' : 'w-[95%] mt-5'}
+    <div className={`rounded-xl m-3 bg-white  ${activeMenu ? 'w-[32%] mt-10' : 'w-[95%] mt-5'}
       flex flex-col justify-center items-center shadow-lg dark:bg-second-dark-bg`}>
         <p className='font-semibold text-slate-600 text-xl py-4  dark:text-gray-200'>Monthly Stats</p>
         <ResponsiveContainer width='100%' height="80%" className={'dark:bg-second-dark-bg'}>

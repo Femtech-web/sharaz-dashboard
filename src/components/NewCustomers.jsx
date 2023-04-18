@@ -28,7 +28,7 @@ const NewCustomers = () => {
     
   return (
     <div className={`flex flex-col bg-white rounded-xl p-6 
-        justify-center ${activeMenu ? 'w-[40%]' : 'w-[100%] '} 
+        justify-center ${activeMenu ? 'w-[40%]' : 'w-[100%] overflow-x-auto'} 
         drop-shadow-xl dark:bg-second-dark-bg`}>
         <p className='font-semibold text-2xl text-slate-600 mb-4 
          dark:text-gray-200'>New Customers</p>

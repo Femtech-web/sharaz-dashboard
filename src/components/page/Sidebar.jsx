@@ -26,7 +26,7 @@ const Sidebar = () => {
 
 
   return (
-    <div className='ml-3 h-screen overflow-hidden
+    <div className='ml-3 h-screen overflow-hidden  
       md:hover:overflow-auto pb-10 relative'>
         {
           activeMenu && 

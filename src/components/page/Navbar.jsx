@@ -12,7 +12,7 @@ const NavButton = ({ icon, color, customFunc, dotColor, hide }) => {
 
   return (
         <button type='button'
-          onClick={customFunc}
+          onClick={() => customFunc()}
           style={{ color }}
           className={`relative p-3 rounded-full
           text-xl hover:bg-gray-200`}
@@ -38,7 +38,7 @@ setScreenSize, handleClick, isClicked, currentColor } = useStateContext();
       handleResize();
 
       return () => window.removeEventListener('resize', handleResize);
-    });
+    }, []);
 
     useEffect(() => {
       if(screenSize <= 900){
